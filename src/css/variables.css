@@ -1,0 +1,253 @@
+/**
+ * Design System Variables
+ * CSS Custom Properties for colors, typography, spacing, layout, and effects
+ */
+
+:root {
+  /* ============================================
+     COLOR PALETTE
+     ============================================ */
+
+  /* Primary Blue - Professional and trustworthy for educational content */
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e40af;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  /* Secondary Purple - AI/Robotics theme, visual interest */
+  --ifm-color-secondary: #8b5cf6;
+  --ifm-color-secondary-dark: #7c3aed;
+  --ifm-color-secondary-darker: #6d28d9;
+  --ifm-color-secondary-darkest: #5b21b6;
+  --ifm-color-secondary-light: #a78bfa;
+  --ifm-color-secondary-lighter: #c4b5fd;
+  --ifm-color-secondary-lightest: #ede9fe;
+
+  /* Neutral Gray Scale - 10 shades for hierarchy */
+  --ifm-color-gray-0: #ffffff;
+  --ifm-color-gray-100: #f9fafb;
+  --ifm-color-gray-200: #f3f4f6;
+  --ifm-color-gray-300: #e5e7eb;
+  --ifm-color-gray-400: #d1d5db;
+  --ifm-color-gray-500: #9ca3af;
+  --ifm-color-gray-600: #6b7280;
+  --ifm-color-gray-700: #4b5563;
+  --ifm-color-gray-800: #374151;
+  --ifm-color-gray-900: #1f2937;
+
+  /* Semantic Colors */
+  --ifm-color-success: #10b981;
+  --ifm-color-success-dark: #059669;
+  --ifm-color-success-light: #34d399;
+
+  --ifm-color-warning: #f59e0b;
+  --ifm-color-warning-dark: #d97706;
+  --ifm-color-warning-light: #fbbf24;
+
+  --ifm-color-danger: #ef4444;
+  --ifm-color-danger-dark: #dc2626;
+  --ifm-color-danger-light: #f87171;
+
+  --ifm-color-info: #3b82f6;
+  --ifm-color-info-dark: #2563eb;
+  --ifm-color-info-light: #60a5fa;
+
+  /* Background and Surface Colors */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f9fafb;
+  --ifm-hover-overlay: rgba(0, 0, 0, 0.05);
+
+  /* ============================================
+     TYPOGRAPHY SYSTEM
+     ============================================ */
+
+  /* Font Families - System fonts for zero network overhead */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  --ifm-font-family-monospace: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono',
+    Consolas, 'Courier New', monospace;
+
+  /* Base Font Size - Mobile first, desktop override in media query */
+  --ifm-font-size-base: 17px;
+
+  /* Font Sizes - Clear hierarchy */
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.5rem;
+  --ifm-h4-font-size: 1.25rem;
+  --ifm-h5-font-size: 1.125rem;
+  --ifm-h6-font-size: 1rem;
+
+  /* Line Heights - Optimal for technical content */
+  --ifm-line-height-base: 1.7;
+  --ifm-heading-line-height: 1.25;
+
+  /* Font Weights */
+  --ifm-font-weight-light: 300;
+  --ifm-font-weight-normal: 400;
+  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-bold: 700;
+
+  /* Code */
+  --ifm-code-font-size: 0.9em;
+  --ifm-code-background: var(--ifm-color-gray-100);
+  --ifm-code-border-radius: 4px;
+  --ifm-code-padding-vertical: 0.1rem;
+  --ifm-code-padding-horizontal: 0.3rem;
+
+  /* ============================================
+     SPACING SCALE
+     ============================================ */
+
+  /* Base unit: 4px (0.25rem) */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 0.75rem;   /* 12px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+
+  /* Component-specific spacing */
+  --ifm-spacing-horizontal: var(--spacing-lg);
+  --ifm-spacing-vertical: var(--spacing-md);
+  --ifm-leading: var(--spacing-lg);
+  --ifm-list-left-padding: var(--spacing-xl);
+  --ifm-paragraph-margin-bottom: var(--spacing-md);
+
+  /* ============================================
+     LAYOUT SPECIFICATIONS
+     ============================================ */
+
+  /* Container Widths */
+  --ifm-container-width: 1140px;
+  --ifm-container-width-xl: 1320px;
+
+  /* Content Widths - Optimized for readability (~80 characters) */
+  --content-max-width: 800px;
+
+  /* Sidebar */
+  --doc-sidebar-width: 300px;
+  --doc-sidebar-hidden-width: 30px;
+
+  /* Navbar */
+  --ifm-navbar-height: 60px;
+  --ifm-navbar-padding-horizontal: var(--spacing-lg);
+  --ifm-navbar-padding-vertical: var(--spacing-md);
+
+  /* ============================================
+     VISUAL EFFECTS
+     ============================================ */
+
+  /* Shadows - Layered depth */
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-tl: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Border Radius */
+  --ifm-global-radius: 8px;
+  --ifm-button-border-radius: var(--ifm-global-radius);
+  --ifm-card-border-radius: var(--ifm-global-radius);
+  --ifm-code-border-radius: 4px;
+
+  /* Transitions - Fast and responsive (150ms) */
+  --ifm-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ifm-transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Borders */
+  --ifm-global-border-width: 1px;
+  --ifm-border-color: var(--ifm-color-gray-300);
+
+  /* ============================================
+     CODE BLOCKS
+     ============================================ */
+
+  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.1);
+  --ifm-code-block-background: var(--ifm-color-gray-100);
+  --ifm-code-block-border-radius: var(--ifm-global-radius);
+
+  /* ============================================
+     LINKS
+     ============================================ */
+
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-color-primary-dark);
+  --ifm-link-decoration: none;
+  --ifm-link-hover-decoration: underline;
+
+  /* ============================================
+     FOCUS INDICATORS
+     ============================================ */
+
+  --ifm-focus-ring-color: var(--ifm-color-primary);
+  --ifm-focus-ring-width: 2px;
+  --ifm-focus-ring-offset: 2px;
+}
+
+/* ============================================
+   DARK MODE OVERRIDES
+   ============================================ */
+
+[data-theme='dark'] {
+  /* Primary Colors - Lighter shades for better contrast on dark backgrounds */
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  /* Secondary Colors */
+  --ifm-color-secondary: #a78bfa;
+  --ifm-color-secondary-dark: #8b5cf6;
+  --ifm-color-secondary-darker: #7c3aed;
+  --ifm-color-secondary-darkest: #6d28d9;
+  --ifm-color-secondary-light: #c4b5fd;
+  --ifm-color-secondary-lighter: #ddd6fe;
+  --ifm-color-secondary-lightest: #ede9fe;
+
+  /* Background and Surface */
+  --ifm-background-color: #1f2937;
+  --ifm-background-surface-color: #374151;
+  --ifm-hover-overlay: rgba(255, 255, 255, 0.1);
+
+  /* Borders */
+  --ifm-border-color: var(--ifm-color-gray-700);
+
+  /* Code Blocks */
+  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.1);
+  --ifm-code-block-background: var(--ifm-color-gray-800);
+  --ifm-code-background: var(--ifm-color-gray-800);
+}
+
+/* ============================================
+   DESKTOP TYPOGRAPHY OVERRIDE
+   ============================================ */
+
+@media (min-width: 997px) {
+  :root {
+    --ifm-font-size-base: 18px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION SUPPORT
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ifm-transition-fast: 0ms;
+    --ifm-transition-slow: 0ms;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

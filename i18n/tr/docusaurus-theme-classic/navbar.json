@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "AI-Native Book",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "AI-Native Book Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Tutorial": {
+    "message": "Tutorial",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.Isaac Navigation": {
+    "message": "Isaac Navigation",
+    "description": "Navbar item with label Isaac Navigation"
+  },
+  "item.label.Module 4: VLA & Capstone": {
+    "message": "Module 4: VLA & Capstone",
+    "description": "Navbar item with label Module 4: VLA & Capstone"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

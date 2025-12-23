@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'AI-Native Book',
+  tagline: 'Comprehensive Guide to AI Humanoids, Robotics, and Vision-Language-Action Models',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -25,14 +25,105 @@ const config: Config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn', // Change to 'warn' for production build with incomplete translations
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // Internationalization configuration
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: [
+      'en',    // English (default)
+      'ur',    // Urdu (special emphasis)
+      'es',    // Spanish
+      'zh',    // Chinese (Simplified)
+      'hi',    // Hindi
+      'ar',    // Arabic
+      'fr',    // French
+      'de',    // German
+      'ja',    // Japanese
+      'ko',    // Korean
+      'pt',    // Portuguese
+      'ru',    // Russian
+      'tr',    // Turkish
+      'it',    // Italian
+      'nl',    // Dutch
+    ],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+      },
+      ur: {
+        label: 'اردو (Urdu)',
+        direction: 'rtl',
+        htmlLang: 'ur-PK',
+      },
+      es: {
+        label: 'Español',
+        direction: 'ltr',
+        htmlLang: 'es-ES',
+      },
+      zh: {
+        label: '简体中文',
+        direction: 'ltr',
+        htmlLang: 'zh-CN',
+      },
+      hi: {
+        label: 'हिन्दी',
+        direction: 'ltr',
+        htmlLang: 'hi-IN',
+      },
+      ar: {
+        label: 'العربية',
+        direction: 'rtl',
+        htmlLang: 'ar-SA',
+      },
+      fr: {
+        label: 'Français',
+        direction: 'ltr',
+        htmlLang: 'fr-FR',
+      },
+      de: {
+        label: 'Deutsch',
+        direction: 'ltr',
+        htmlLang: 'de-DE',
+      },
+      ja: {
+        label: '日本語',
+        direction: 'ltr',
+        htmlLang: 'ja-JP',
+      },
+      ko: {
+        label: '한국어',
+        direction: 'ltr',
+        htmlLang: 'ko-KR',
+      },
+      pt: {
+        label: 'Português',
+        direction: 'ltr',
+        htmlLang: 'pt-BR',
+      },
+      ru: {
+        label: 'Русский',
+        direction: 'ltr',
+        htmlLang: 'ru-RU',
+      },
+      tr: {
+        label: 'Türkçe',
+        direction: 'ltr',
+        htmlLang: 'tr-TR',
+      },
+      it: {
+        label: 'Italiano',
+        direction: 'ltr',
+        htmlLang: 'it-IT',
+      },
+      nl: {
+        label: 'Nederlands',
+        direction: 'ltr',
+        htmlLang: 'nl-NL',
+      },
+    },
   },
 
   presets: [
@@ -75,9 +166,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'AI-Native Book',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'AI-Native Book Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -86,6 +177,18 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'isaacNavigationSidebar',
+          position: 'left',
+          label: 'Isaac Navigation',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'module4Sidebar',
+          position: 'left',
+          label: 'Module 4: VLA & Capstone',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -99,38 +202,38 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Learn',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Getting Started',
               to: '/docs/intro',
             },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Isaac Navigation',
+              to: '/docs/isaac-navigation-systems/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Module 4: VLA',
+              to: '/docs/module-4-vla-planning-capstone/',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Resources',
           items: [
             {
               label: 'Blog',
               to: '/blog',
             },
+            {
+              label: 'Digital Twin Robots',
+              to: '/docs/digital-twin-robots/',
+            },
+          ],
+        },
+        {
+          title: 'About',
+          items: [
             {
               label: 'GitHub',
               href: 'https://github.com/facebook/docusaurus',
@@ -138,7 +241,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AI-Native Book. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

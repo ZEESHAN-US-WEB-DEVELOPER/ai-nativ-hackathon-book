@@ -1,30 +1,119 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * AI-Native Book - Custom CSS
+ *
+ * This file imports design system variables and component styles.
+ * The classic template bundles Infima by default, which we extend with our design system.
  */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+/* Import Google Fonts for multilingual support */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+/* Import design system variables (colors, typography, spacing, layout, effects) */
+@import './variables.css';
+
+/* Import component-specific styles (navbar, sidebar, content, buttons, etc.) */
+@import './components.css';
+
+/**
+ * Additional custom styles can be added below
+ * These will override the imported variables and component styles if needed
+ */
+
+/* ============================================
+   MULTILINGUAL FONT SUPPORT
+   ============================================ */
+
+/* Urdu (special emphasis with Nastaliq script) */
+html[lang="ur"],
+html[lang="ur"] * {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', serif;
+  direction: rtl;
+  text-align: right;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+html[lang="ur"] code,
+html[lang="ur"] pre {
+  direction: ltr;
+  text-align: left;
+  font-family: var(--ifm-font-family-monospace);
 }
+
+/* Arabic */
+html[lang="ar"],
+html[lang="ar"] * {
+  font-family: 'Noto Sans Arabic', 'Arial', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="ar"] code,
+html[lang="ar"] pre {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Chinese */
+html[lang="zh"],
+html[lang="zh"] * {
+  font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+}
+
+/* Japanese */
+html[lang="ja"],
+html[lang="ja"] * {
+  font-family: 'Noto Sans JP', 'Yu Gothic', sans-serif;
+}
+
+/* Korean */
+html[lang="ko"],
+html[lang="ko"] * {
+  font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+/* Hindi */
+html[lang="hi"],
+html[lang="hi"] * {
+  font-family: 'Noto Sans Devanagari', 'Arial Unicode MS', sans-serif;
+}
+
+/* RTL language adjustments */
+html[dir="rtl"] .navbar__items {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .menu {
+  text-align: right;
+}
+
+html[dir="rtl"] .breadcrumbs {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .pagination-nav {
+  flex-direction: row-reverse;
+}
+
+/* Language-specific typography adjustments */
+html[lang="ur"] h1,
+html[lang="ur"] h2,
+html[lang="ur"] h3 {
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+html[lang="ur"] p {
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3 {
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+html[lang="ar"] p {
+  line-height: 1.9;
+}
+

@@ -1,0 +1,98 @@
+{
+  "version.label": {
+    "message": "اگلا",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Basics": {
+    "message": "بنیادی باتیں",
+    "description": "The label for category 'Tutorial - Basics' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Extras": {
+    "message": "اضافی",
+    "description": "The label for category 'Tutorial - Extras' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.module4Sidebar.category.Module 4: VLA, Planning & Capstone": {
+    "message": "ماڈیول 4: وی ایل اے، منصوبہ بندی اور کیپ سٹون",
+    "description": "The label for category 'Module 4: VLA, Planning & Capstone' in sidebar 'module4Sidebar'"
+  },
+  "sidebar.module4Sidebar.category.Chapter 1: VLA Models": {
+    "message": "باب 1: وژن-لینگویج-ایکشن ماڈلز",
+    "description": "The label for category 'Chapter 1: VLA Models' in sidebar 'module4Sidebar'"
+  },
+  "sidebar.module4Sidebar.category.Chapter 2: Planning & Control": {
+    "message": "باب 2: منصوبہ بندی اور کنٹرول",
+    "description": "The label for category 'Chapter 2: Planning & Control' in sidebar 'module4Sidebar'"
+  },
+  "sidebar.module4Sidebar.category.Chapter 3: Capstone Project": {
+    "message": "باب 3: کیپ سٹون پروجیکٹ",
+    "description": "The label for category 'Chapter 3: Capstone Project' in sidebar 'module4Sidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Basics.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category 'Tutorial - Basics' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.chapters": {
+    "message": "chapters",
+    "description": "The label for category 'chapters' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Digital Twin of Humanoid Robots": {
+    "message": "Digital Twin of Humanoid Robots",
+    "description": "The label for category 'Digital Twin of Humanoid Robots' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.High-Fidelity Digital Twins with Unity": {
+    "message": "High-Fidelity Digital Twins with Unity",
+    "description": "The label for category 'High-Fidelity Digital Twins with Unity' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Physics Simulation with Gazebo": {
+    "message": "Physics Simulation with Gazebo",
+    "description": "The label for category 'Physics Simulation with Gazebo' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Isaac Navigation Systems": {
+    "message": "Isaac Navigation Systems",
+    "description": "The label for category 'Isaac Navigation Systems' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Isaac ROS": {
+    "message": "Isaac ROS",
+    "description": "The label for category 'Isaac ROS' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Isaac Sim": {
+    "message": "Isaac Sim",
+    "description": "The label for category 'Isaac Sim' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Nav2": {
+    "message": "Nav2",
+    "description": "The label for category 'Nav2' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.ماڈیول 4: وژن-لینگویج-ایکشن، منصوبہ بندی اور کیپ سٹون": {
+    "message": "ماڈیول 4: وژن-لینگویج-ایکشن، منصوبہ بندی اور کیپ سٹون",
+    "description": "The label for category 'ماڈیول 4: وژن-لینگویج-ایکشن، منصوبہ بندی اور کیپ سٹون' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 3: Capstone Project": {
+    "message": "Chapter 3: Capstone Project",
+    "description": "The label for category 'Chapter 3: Capstone Project' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 2: Motion Planning and Control": {
+    "message": "Chapter 2: Motion Planning and Control",
+    "description": "The label for category 'Chapter 2: Motion Planning and Control' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 1: Vision-Language-Action Models": {
+    "message": "Chapter 1: Vision-Language-Action Models",
+    "description": "The label for category 'Chapter 1: Vision-Language-Action Models' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.isaacNavigationSidebar.category.Isaac Navigation Systems": {
+    "message": "Isaac Navigation Systems",
+    "description": "The label for category 'Isaac Navigation Systems' in sidebar 'isaacNavigationSidebar'"
+  },
+  "sidebar.isaacNavigationSidebar.category.Isaac Sim": {
+    "message": "Isaac Sim",
+    "description": "The label for category 'Isaac Sim' in sidebar 'isaacNavigationSidebar'"
+  },
+  "sidebar.isaacNavigationSidebar.category.Isaac ROS": {
+    "message": "Isaac ROS",
+    "description": "The label for category 'Isaac ROS' in sidebar 'isaacNavigationSidebar'"
+  },
+  "sidebar.isaacNavigationSidebar.category.Nav2": {
+    "message": "Nav2",
+    "description": "The label for category 'Nav2' in sidebar 'isaacNavigationSidebar'"
+  }
+}

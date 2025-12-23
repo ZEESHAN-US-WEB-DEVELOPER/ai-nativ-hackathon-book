@@ -1,0 +1,42 @@
+{
+  "link.title.Learn": {
+    "message": "Learn",
+    "description": "The title of the footer links column with title=Learn in the footer"
+  },
+  "link.title.Resources": {
+    "message": "Resources",
+    "description": "The title of the footer links column with title=Resources in the footer"
+  },
+  "link.title.About": {
+    "message": "About",
+    "description": "The title of the footer links column with title=About in the footer"
+  },
+  "link.item.label.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label of footer link with label=Getting Started linking to /docs/intro"
+  },
+  "link.item.label.Isaac Navigation": {
+    "message": "Isaac Navigation",
+    "description": "The label of footer link with label=Isaac Navigation linking to /docs/isaac-navigation-systems/"
+  },
+  "link.item.label.Module 4: VLA": {
+    "message": "Module 4: VLA",
+    "description": "The label of footer link with label=Module 4: VLA linking to /docs/module-4-vla-planning-capstone/"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "link.item.label.Digital Twin Robots": {
+    "message": "Digital Twin Robots",
+    "description": "The label of footer link with label=Digital Twin Robots linking to /docs/digital-twin-robots/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/facebook/docusaurus"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 AI-Native Book. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

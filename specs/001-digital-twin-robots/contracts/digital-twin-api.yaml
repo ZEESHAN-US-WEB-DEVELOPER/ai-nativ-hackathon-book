@@ -1,0 +1,238 @@
+# API Contract: Digital Twin Robot Module
+
+## Overview
+
+This contract defines the API endpoints for the digital twin robot module, enabling interaction with simulation environments, robot models, and sensor data streams. The API follows RESTful principles and provides JSON responses.
+
+## Base URL
+
+```
+https://ai-native-book.example.com/api/digital-twin
+```
+
+## Authentication
+
+All endpoints require authentication using a Bearer token in the Authorization header:
+
+```
+Authorization: Bearer {token}
+```
+
+## Endpoints
+
+### 1. Robot Models
+
+#### GET /robot-models
+Retrieve a list of available robot models for the digital twin simulation.
+
+**Response:**
+```json
+{
+  "models": [
+    {
+      "id": "humanoid-001",
+      "name": "Basic Humanoid Robot",
+      "description": "Simple humanoid robot model with 2 arms, 2 legs, and head",
+      "joints": ["head", "left_shoulder", "left_elbow", "right_shoulder", "right_elbow", ...],
+      "sensors": ["lidar", "imu", "camera"],
+      "physical_properties": {
+        "height": 1.7,
+        "mass": 75.0,
+        "friction_coefficient": 0.5
+      }
+    }
+  ]
+}
+```
+
+#### GET /robot-models/{id}
+Retrieve details of a specific robot model.
+
+**Response:**
+```json
+{
+  "id": "humanoid-001",
+  "name": "Basic Humanoid Robot",
+  "description": "Simple humanoid robot model with 2 arms, 2 legs, and head",
+  "urdf_file": "/path/to/robot.urdf",
+  "mesh_files": ["/path/to/body.obj", "/path/to/head.obj"],
+  "joints": [
+    {
+      "name": "left_shoulder",
+      "type": "revolute",
+      "limits": {"lower": -1.57, "upper": 1.57, "effort": 100, "velocity": 1.0}
+    }
+  ],
+  "sensors": [
+    {
+      "type": "lidar",
+      "position": {"x": 0.5, "y": 0.0, "z": 1.0},
+      "specifications": {
+        "range": 10.0,
+        "resolution": 0.01,
+        "fov": 360
+      }
+    }
+  ]
+}
+```
+
+### 2. Simulation Environments
+
+#### GET /environments
+Retrieve a list of available simulation environments.
+
+**Response:**
+```json
+{
+  "environments": [
+    {
+      "id": "office-001",
+      "name": "Office Environment",
+      "description": "Simple office environment with furniture and obstacles",
+      "size": {"x": 10.0, "y": 10.0, "z": 3.0},
+      "gravity": 9.81
+    }
+  ]
+}
+```
+
+#### GET /environments/{id}
+Retrieve details of a specific simulation environment.
+
+**Response:**
+```json
+{
+  "id": "office-001",
+  "name": "Office Environment",
+  "description": "Simple office environment with furniture and obstacles",
+  "sdf_file": "/path/to/environment.sdf",
+  "mesh_files": ["/path/to/walls.obj", "/path/to/furniture.obj"],
+  "physical_properties": {
+    "gravity": 9.81,
+    "friction_coefficient": 0.6
+  },
+  "objects": [
+    {
+      "type": "table",
+      "position": {"x": 2.0, "y": 2.0, "z": 0.0},
+      "dimensions": {"x": 1.0, "y": 0.5, "z": 0.75}
+    }
+  ]
+}
+```
+
+### 3. Simulations
+
+#### POST /simulations
+Create a new simulation instance with specified robot model and environment.
+
+**Request Body:**
+```json
+{
+  "robot_model_id": "humanoid-001",
+  "environment_id": "office-001",
+  "initial_state": {
+    "position": {"x": 0.0, "y": 0.0, "z": 0.0},
+    "orientation": {"x": 0.0, "y": 0.0, "z": 0.0, "w": 1.0}
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "simulation_id": "sim-001-abc",
+  "status": "running",
+  "created_at": "2025-12-20T10:00:00Z",
+  "robot_model_id": "humanoid-001",
+  "environment_id": "office-001"
+}
+```
+
+#### GET /simulations/{id}
+Retrieve the current state of a simulation.
+
+**Response:**
+```json
+{
+  "simulation_id": "sim-001-abc",
+  "status": "running",
+  "timestamp": "2025-12-20T10:05:30Z",
+  "physics_state": {
+    "position": {"x": 1.2, "y": 0.8, "z": 0.0},
+    "orientation": {"x": 0.0, "y": 0.0, "z": 0.1, "w": 0.99},
+    "velocity": {"linear": {"x": 0.5, "y": 0.3, "z": 0.0}, "angular": {"x": 0.0, "y": 0.0, "z": 0.1}}
+  },
+  "sensor_data": {
+    "lidar": {
+      "timestamp": "2025-12-20T10:05:30Z",
+      "point_cloud": [{"x": 2.0, "y": 0.5, "z": 0.0, "intensity": 0.8}, ...],
+      "range": 10.0
+    },
+    "imu": {
+      "timestamp": "2025-12-20T10:05:30Z",
+      "acceleration": {"x": 0.2, "y": 0.1, "z": 9.7},
+      "angular_velocity": {"x": 0.01, "y": 0.02, "z": 0.05},
+      "orientation": {"x": 0.0, "y": 0.0, "z": 0.1, "w": 0.99}
+    }
+  }
+}
+```
+
+#### PUT /simulations/{id}/control
+Send control commands to the robot in the simulation.
+
+**Request Body:**
+```json
+{
+  "commands": [
+    {
+      "joint": "left_shoulder",
+      "position": 0.5,
+      "velocity": 0.1
+    }
+  ]
+}
+```
+
+**Response:**
+```json
+{
+  "status": "command_accepted",
+  "execution_time": "2025-12-20T10:05:31Z"
+}
+```
+
+#### DELETE /simulations/{id}
+Stop and remove a simulation instance.
+
+**Response:**
+```json
+{
+  "status": "deleted",
+  "simulation_id": "sim-001-abc"
+}
+```
+
+## Error Responses
+
+All endpoints return standard error responses:
+
+```json
+{
+  "error": {
+    "code": "RESOURCE_NOT_FOUND",
+    "message": "The requested resource does not exist",
+    "details": "Simulation ID 'sim-001-abc' was not found"
+  }
+}
+```
+
+## Common Error Codes
+
+- `UNAUTHORIZED`: Authentication required or invalid token
+- `RESOURCE_NOT_FOUND`: Requested resource does not exist
+- `VALIDATION_ERROR`: Request body validation failed
+- `SIMULATION_ERROR`: Error occurred during simulation
+- `RATE_LIMITED`: Too many requests

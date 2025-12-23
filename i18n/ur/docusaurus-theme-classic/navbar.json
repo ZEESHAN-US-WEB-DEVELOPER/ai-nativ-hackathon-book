@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "اے آئی-نیٹو کتاب",
+    "description": "The title in the navbar"
+  },
+  "item.label.Tutorial": {
+    "message": "ٹیوٹوریل",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.Isaac Navigation": {
+    "message": "آئزک نیویگیشن",
+    "description": "Navbar item with label Isaac Navigation"
+  },
+  "item.label.Module 4: VLA & Capstone": {
+    "message": "ماڈیول 4: وی ایل اے اور کیپ سٹون",
+    "description": "Navbar item with label Module 4: VLA & Capstone"
+  },
+  "item.label.Blog": {
+    "message": "بلاگ",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "گِٹ ہب",
+    "description": "Navbar item with label GitHub"
+  },
+  "logo.alt": {
+    "message": "AI-Native Book Logo",
+    "description": "The alt text of navbar logo"
+  }
+}
